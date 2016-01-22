@@ -3,3 +3,7 @@ function Contact(firstName,lastName) {
   this.lastName = lastName;
   this.addresses = [];
 }
+
+Contact.prototype.fullName = function() {
+  return this.firstName + " " + this.lastName;
+}
