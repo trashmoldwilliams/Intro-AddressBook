@@ -50,7 +50,7 @@ $(document).ready(function() {
       var newAddress = new Address(inputtedStreet, inputtedCity, inputtedState)
       newContact.addresses.push(newAddress)
     });
-    
+
     $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
 
     $("input#new-first-name").val("");
@@ -61,6 +61,10 @@ $(document).ready(function() {
       $("#show-contact h2").text(newContact.fullName());
       $(".first-name").text(newContact.firstName);
       $(".last-name").text(newContact.lastName);
+      $("ul#addresses").text("");
+      newContact.addresses.forEach(function(address) {
+        $("ul#addresses").append("<li>" + address.fullAddress() + "</li>");
+      });
     });
 
   });
