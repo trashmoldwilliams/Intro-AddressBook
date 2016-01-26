@@ -10,3 +10,9 @@
 .contact:hover {
   text-decoration: underline;
 }
+
+.borderTop {
+  border-top: 1px solid grey;
+  margin-top: 20px;
+  padding-top: 20px;
+}
